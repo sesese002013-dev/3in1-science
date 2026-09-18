@@ -1,0 +1,11 @@
+# الملفات الحساسة — لا تُرفع أبدًا (تبقى محلية فقط)
+admin.html
+app.src.js
+science-platform-standalone.html
+New folder/
+
+# مخلفات النظام والمحررات
+Thumbs.db
+.DS_Store
+*.tmp
+.vscode/
