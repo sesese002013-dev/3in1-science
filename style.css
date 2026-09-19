@@ -398,6 +398,28 @@ select.input{background:#0a0e2a;border:1px solid var(--line2);border-radius:10px
 @keyframes collideP{0%{box-shadow:0 0 0 rgba(248,113,113,0)}40%{box-shadow:0 0 26px rgba(248,113,113,.55)}100%{box-shadow:none}}
 @media (prefers-reduced-motion:reduce){.shake,.collide{animation:none!important}}
 
+/* ════ مهارات الامتحان + تعميق الرواية ════ */
+.passage{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:14px 16px;margin:8px 0}
+.passage p{font-size:14px;line-height:2;margin:6px 0}
+.dlg-line{background:var(--card2);border:1px solid var(--line2);border-radius:11px;padding:10px 14px;margin-bottom:8px}
+.dlg-line b{color:var(--gold)}
+.dlg-line .ltr{display:block;margin-top:4px;font-size:14px}
+.gap-ok{border-color:#34d399!important;box-shadow:0 0 14px rgba(52,211,153,.3)}
+.gap-bad{border-color:#f87171!important;box-shadow:0 0 14px rgba(248,113,113,.3)}
+.trans-src{font-size:15px;font-weight:700}
+.trans-model{margin-top:8px}
+.tarea{width:100%;min-height:64px;background:#0a0e2a;border:1px solid var(--line2);border-radius:10px;
+  color:var(--txt);padding:10px;font-family:inherit;font-size:14px;margin:6px 0}
+.wcheck{display:flex;align-items:center;gap:8px;font-size:13px;margin:4px 0;cursor:pointer}
+.wcheck input{width:16px;height:16px;accent-color:var(--gold)}
+.relmap{width:100%;height:auto;background:var(--card);border:1px solid var(--line2);border-radius:14px;padding:8px}
+.relmap line{stroke:rgba(251,191,36,.5);stroke-width:2}
+.relmap text{fill:var(--mut);font-size:13px;text-anchor:middle;font-family:inherit}
+.relmap circle{fill:var(--card2);stroke:var(--neon1);stroke-width:2}
+.relmap circle.nd-gold{fill:rgba(251,191,36,.15);stroke:var(--gold)}
+.relmap .nd-en{fill:var(--neon1);font-size:13px;font-weight:700}
+.relmap .nd-ar{fill:var(--txt);font-size:14px;font-weight:800}
+
 /* ════ استجابة الشاشات ════ */
 @media(max-width:900px){
   .dual-viewport{grid-template-columns:1fr}
