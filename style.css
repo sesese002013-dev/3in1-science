@@ -364,6 +364,40 @@ select.input{background:#0a0e2a;border:1px solid var(--line2);border-radius:10px
   .cine-in,.flip-inner{animation:none!important;transition:none!important}
 }
 
+/* ════ مختبر القواعد (DATA 2.2): عدّادات + شرائح + خانات ════ */
+.toggle-row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{background:var(--card2);border:1px solid var(--line2);border-radius:10px;color:var(--txt);
+  padding:6px 12px;font-size:13px;font-family:inherit;cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--gold)}
+.chip.sel{border-color:var(--neon1);box-shadow:0 0 14px rgba(34,211,238,.25)}
+.slot{background:transparent;border:2px dashed rgba(251,191,36,.5);border-radius:10px;color:var(--txt);
+  padding:8px 16px;font-size:13px;font-family:inherit;cursor:pointer;transition:.15s}
+.slot:hover{background:rgba(251,191,36,.08)}
+.slot.sel{border-style:solid;border-color:var(--neon1)}
+.lab-out{background:var(--card);border:1px solid var(--line2);border-radius:12px;
+  padding:12px 14px;margin-top:10px;min-height:60px}
+.lab-out h4{color:var(--gold);font-size:15px;margin-bottom:6px}
+.lab-out p{font-size:13px;line-height:1.9;margin:4px 0}
+.lab-badge{display:inline-block;padding:3px 14px;border-radius:20px;font-weight:800;font-size:13px;margin-bottom:6px}
+.b-red{background:rgba(248,113,113,.15);color:#f87171;border:1px solid rgba(248,113,113,.5)}
+.b-blue{background:rgba(96,165,250,.13);color:#60a5fa;border:1px solid rgba(96,165,250,.5)}
+.b-gold{background:rgba(251,191,36,.12);color:var(--gold);border:1px solid rgba(251,191,36,.5)}
+.b-green{background:rgba(52,211,153,.12);color:#34d399;border:1px solid rgba(52,211,153,.5)}
+.b-orange{background:rgba(251,146,60,.13);color:#fb923c;border:1px solid rgba(251,146,60,.5)}
+.lab-meter{height:12px;background:#0a0e2a;border:1px solid var(--line2);border-radius:8px;overflow:hidden;margin:8px 0}
+.meter-fill{height:100%;background:linear-gradient(90deg,var(--neon1),var(--gold));border-radius:8px;transition:width .4s}
+.lab-sent{font-weight:700;font-size:15px}
+.lab-sent.ok{color:#34d399}
+.lab-sent.bad{color:#f87171}
+.lab-shift{margin-top:8px;border-top:1px dashed var(--line2);padding-top:8px}
+.lab-done{margin-top:10px;text-align:center}
+.tick{color:#34d399;font-weight:800}
+.shake{animation:shakeX .4s}
+@keyframes shakeX{25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+.collide{animation:collideP .6s}
+@keyframes collideP{0%{box-shadow:0 0 0 rgba(248,113,113,0)}40%{box-shadow:0 0 26px rgba(248,113,113,.55)}100%{box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.shake,.collide{animation:none!important}}
+
 /* ════ استجابة الشاشات ════ */
 @media(max-width:900px){
   .dual-viewport{grid-template-columns:1fr}
