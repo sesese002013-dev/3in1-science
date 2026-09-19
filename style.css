@@ -246,6 +246,36 @@ input[type=range]{accent-color:var(--neon1)}
   display:flex;align-items:center;justify-content:center}
 .result-stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0}
 
+/* ════ مستويات الأسئلة ════ */
+.lv-stats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+.lv-badge{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid}
+.lv-badge.e{color:#4ade80;border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.08)}
+.lv-badge.m{color:#fbbf24;border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.08)}
+.lv-badge.h{color:#f87171;border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.08)}
+.lv-pick{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.lv-opt{background:var(--card2);border:1px solid var(--line2);border-radius:999px;
+  padding:6px 16px;font-size:13px;font-weight:700;color:var(--dim);transition:.15s}
+.lv-opt.on{border-color:var(--gold);color:var(--gold);background:rgba(251,191,36,.08)}
+.puzzle-opt.selected{border-color:var(--neon1);color:var(--neon1);background:rgba(52,211,153,.08)}
+
+/* ════ مؤقت الامتحان ════ */
+.exam-timer{display:inline-flex;align-items:center;gap:6px;margin-inline-start:10px;
+  padding:3px 12px;border-radius:999px;font-size:12px;font-weight:800;color:var(--neon1);
+  border:1px solid rgba(52,211,153,.4);background:rgba(52,211,153,.08);direction:ltr}
+.exam-timer.low{color:var(--danger);border-color:rgba(248,113,113,.5);background:rgba(248,113,113,.1);animation:blinkT 1s steps(2,start) infinite}
+@keyframes blinkT{to{visibility:hidden}}
+
+/* ════ تقرير الامتحان ════ */
+.report-item{background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:12px 14px;margin-top:10px}
+.report-q{font-size:14px;font-weight:800;line-height:1.8}
+.report-line{font-size:13px;font-weight:700;margin-top:6px}
+.report-line.correct{color:var(--ok)}
+.report-line.wrong{color:var(--danger)}
+.report-line.muted{color:var(--dim)}
+.report-explain{font-size:12px;color:var(--mut);line-height:1.8;margin-top:6px}
+.mastery{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.5);color:var(--ok);
+  border-radius:11px;padding:12px 14px;font-weight:800;margin-top:12px;text-align:center}
+
 /* ════ استجابة الشاشات ════ */
 @media(max-width:900px){
   .dual-viewport{grid-template-columns:1fr}
