@@ -319,6 +319,51 @@ select.input{background:#0a0e2a;border:1px solid var(--line2);border-radius:10px
 .think-box p{font-size:13px;color:var(--mut);line-height:1.9;margin-top:6px}
 #infoBody p{font-size:13px;line-height:1.9;margin-top:8px}
 
+/* ════ سينمائي (DATA 2.1): ظهور + flip + تايم لاين + split ════ */
+.cine{opacity:0;transform:translateY(18px)}
+.cine-in{animation:cineUp .5s ease forwards}
+@keyframes cineUp{to{opacity:1;transform:none}}
+.tilt{transform-style:preserve-3d;will-change:transform}
+.novel-card{transition:box-shadow .25s,border-color .25s}
+.novel-card:hover{border-color:rgba(251,191,36,.55);box-shadow:0 8px 30px rgba(251,191,36,.12)}
+.rule-card{transition:transform .2s,border-color .2s,box-shadow .2s}
+.rule-card:hover{transform:translateY(-3px);border-color:var(--neon1);box-shadow:0 8px 26px rgba(34,211,238,.14)}
+.flash-wrap{transition:transform .2s}
+.flash-wrap:hover{transform:translateY(-3px)}
+.tense-line{transition:border-color .2s,box-shadow .2s}
+.tense-line:hover{border-color:var(--neon1);box-shadow:0 6px 22px rgba(34,211,238,.12)}
+/* بطاقة شخصية قابلة للقلب */
+.character-flip-card{perspective:900px;cursor:pointer;min-height:150px}
+.flip-inner{position:relative;width:100%;height:100%;min-height:150px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,.1,.2,1)}
+.character-flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  padding:14px;background:var(--card2);border:1px solid var(--line2);font-size:13px;text-align:center}
+.flip-front b{color:var(--gold);font-size:14px}
+.flip-back{transform:rotateY(180deg);background:linear-gradient(160deg,rgba(251,191,36,.1),rgba(34,211,238,.06));
+  border-color:rgba(251,191,36,.45)}
+.flip-back p{font-size:12px;color:var(--mut);line-height:1.8}
+.char-medal{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:800;color:#0a0e2a;background:linear-gradient(135deg,var(--gold),var(--neon1))}
+.flip-hint{font-size:11px;color:var(--mut)}
+.bio-btn{margin-top:4px}
+/* خط زمني للمشاهد */
+.scene-timeline{position:relative;margin-top:6px;padding-inline-start:22px;border-inline-start:2px solid rgba(251,191,36,.35)}
+.scene-card{position:relative}
+.tl-dot{position:absolute;inset-inline-start:-33px;top:14px;width:22px;height:22px;border-radius:50%;
+  background:var(--gold);color:#0a0e2a;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.scene-split{display:flex;gap:12px;align-items:stretch}
+.scene-split .scene-img{flex:0 0 42%;margin-bottom:0}
+.scene-txt{flex:1;display:flex;flex-direction:column;gap:4px}
+.scene-txt p{font-size:13px;line-height:1.9;margin:2px 0}
+.scene-who{font-size:12px;color:var(--gold);background:rgba(251,191,36,.07);
+  border:1px dashed rgba(251,191,36,.4);border-radius:9px;padding:4px 10px}
+@media (max-width:640px){.scene-split{flex-direction:column}.scene-split .scene-img{flex:none;min-height:120px}}
+@media (prefers-reduced-motion:reduce){
+  .cine{opacity:1;transform:none}
+  .cine-in,.flip-inner{animation:none!important;transition:none!important}
+}
+
 /* ════ استجابة الشاشات ════ */
 @media(max-width:900px){
   .dual-viewport{grid-template-columns:1fr}
