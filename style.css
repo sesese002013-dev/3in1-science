@@ -276,6 +276,49 @@ input[type=range]{accent-color:var(--neon1)}
 .mastery{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.5);color:var(--ok);
   border-radius:11px;padding:12px 14px;font-weight:800;margin-top:12px;text-align:center}
 
+/* ════ الإنجليزية: LTR + فلاش + تايم لاين + رواية ════ */
+.ltr{direction:ltr;text-align:left;unicode-bidi:embed}
+select.input{background:#0a0e2a;border:1px solid var(--line2);border-radius:10px;color:var(--txt);
+  padding:10px;font-family:inherit;font-size:14px;width:100%;margin-bottom:6px}
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.flash-wrap{display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.flash-card{perspective:600px;cursor:pointer}
+.flash-inner{position:relative;width:100%;height:112px;transform-style:preserve-3d;transition:transform .45s}
+.flash-card.flip .flash-inner{transform:rotateY(180deg)}
+.flash-front,.flash-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  padding:8px;background:var(--card2);border:1px solid var(--line2);font-size:13px}
+.flash-front b{font-size:17px;color:var(--neon1)}
+.flash-back{transform:rotateY(180deg);background:rgba(251,191,36,.07);border-color:rgba(251,191,36,.4)}
+.flash-back b{font-size:15px;color:var(--gold)}
+.mini-spk{background:var(--card2);border:1px solid var(--line2);border-radius:9px;color:var(--txt);
+  font-size:12px;padding:4px 12px;align-self:center;cursor:pointer}
+.mini-spk:hover{border-color:var(--neon1)}
+.tense-out{margin-bottom:6px}
+.tense-out h4{color:var(--gold);font-size:15px;margin-bottom:8px}
+.tense-line{background:var(--card2);border:1px solid var(--line2);border-radius:11px;padding:10px 14px;margin-bottom:8px}
+.tense-line p{margin:3px 0;font-size:13px}
+.tense-line .ltr{font-weight:700;color:var(--neon1)}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.char-card{background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:14px;color:var(--txt);
+  font-size:13px;display:flex;flex-direction:column;gap:4px;transition:.15s;cursor:pointer;text-align:right}
+.char-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.char-card b{color:var(--gold);font-size:14px}
+.novel-body{margin-top:12px}
+.novel-body h3{font-size:17px;color:var(--neon1);margin:6px 0 10px}
+.novel-body h4{font-size:15px;color:var(--gold);margin:14px 0 6px}
+.scene-card{background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:12px 14px;margin-top:10px}
+.scene-card p{font-size:13px;line-height:1.9;margin:4px 0}
+.scene-img{position:relative;border-radius:10px;overflow:hidden;min-height:86px;display:flex;
+  align-items:center;justify-content:center;margin-bottom:8px;
+  background:linear-gradient(135deg,#1a1440,#0a2a3a);border:1px solid var(--line)}
+.scene-img span{font-size:13px;color:var(--gold);font-weight:800;padding:22px}
+.scene-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.think-box{background:var(--card2);border:1px solid var(--line2);border-radius:11px;padding:10px 14px;margin-top:8px}
+.think-box summary{font-weight:800;font-size:14px;cursor:pointer}
+.think-box p{font-size:13px;color:var(--mut);line-height:1.9;margin-top:6px}
+#infoBody p{font-size:13px;line-height:1.9;margin-top:8px}
+
 /* ════ استجابة الشاشات ════ */
 @media(max-width:900px){
   .dual-viewport{grid-template-columns:1fr}
